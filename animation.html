@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#animation{
+			width:200px;
+			height:200px;
+			background-color:black;
+			position:absolute;
+
+			animation-name:jump;
+			animation-iteration-count:infinite;
+			animation-duration:3s;
+
+		}
+		body{
+			background-color:beige;
+		}
+		@keyframes jump{
+			0%{
+				top:300px;
+				right:0px;
+				border:10px solid darkblue;
+
+			}
+			50%{
+				top:300px;
+				right:1200px;
+				transform:rotate(400deg);
+				border:10px solid darkred;
+			}
+
+			100%{
+				top:300px;
+				right:0px;
+				border:10px solid mediumpurple;
+			}
+			
+			
+		}
+	</style>
+	
+</head>
+
+<body>
+
+
+	<div id="animation"></div>
+
+</body>
+</html>
