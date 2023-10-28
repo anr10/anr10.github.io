@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#jumpscare{
+			height: 20px;
+			width: 20px;
+			background-color: black;
+			border-radius: 100%;
+			display: inline-block;
+			position:relative;
+			top:300px;
+			background-position:center;
+			background-size:cover;
+			transition:8s;
+			animation-duration:44s;
+			animation-iteration-count:1;
+			z-index:2;
+		}
+
+		#box{
+			height:800px;
+			width:100%;
+			background-repeat:no-repeat;
+			background-size:contain;
+			background-size:cover;
+			position:absolute;
+			top: 0;
+			z-index:0;
+			margin:0px;
+			background-image:url(https://www.explore.com/img/gallery/where-to-see-beautiful-cherry-blossoms-around-the-world/intro-1667778429.jpg);
+		}
+		#writing1{
+			position:absolute;
+			left:700px;
+			bottom:435px;
+			z-index:1;
+		}
+
+		body{
+			animation-duration:0s;
+			animation-iteration-count:1;
+			margin:0px;
+
+
+		}
+
+		
+
+		@keyframes face{
+
+			0%{
+				background-color:black;
+			}
+
+			20%{
+				background-color:black;
+			}
+
+			52%{
+				background-image:url(https://www.allconnect.com/wp-content/uploads/2022/08/404-misspelled-URL.png);
+			
+			}
+
+			53%{
+				
+				background-image:url(https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2022/10/GettyImages-1185552380.jpg);
+			
+			}
+
+			90%{
+				background-image:url(https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2022/10/GettyImages-1185552380.jpg);
+			
+			}
+			95%{
+				background-image:url(https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2022/10/GettyImages-1185552380.jpg);
+			
+			}
+
+			100%{
+				background-image:url(https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2022/10/GettyImages-1185552380.jpg);
+			
+			}
+
+		}
+	</style>
+</head>
+<body>
+<center><div id="jumpscare"></div></center>
+<div id="writing1">what an interesting flower, seems a bit...black. like my soul.</div>
+<div id="box"></div>
+<audio src="scream2.mp3" id="scream"></audio>
+
+<script type="text/javascript">
+	jumpscare.addEventListener("click",
+		function(){
+			jumpscare.style.right="0px"
+			jumpscare.style.top="0px"
+			jumpscare.style.width ="100%";
+			jumpscare.style.height ="900px";
+			jumpscare.style.borderRadius ="0%";
+			jumpscare.style.animationName ="face";
+			var left =0;
+
+		document.addEventListener("click", function(){
+			scream.play()
+
+		})
+
+
+		})
+
+</script>
+</body>
+</html>
