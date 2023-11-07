@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background:beige;
+		}
+
+	</style>
+
+</head>
+
+
+
+<body>
+
+	<div class="cookiefactory"><h1>------------------------------------------------------click to eat cookies!------------------------------------------------------<h1></div>
+
+
+<script type="text/javascript">
+	function makeCookie (){
+		var cookie = document.createElement("div");
+		document.body.appendChild(cookie);
+		cookie.style.width="100px";
+		cookie.style.height="100px";
+		cookie.style.backgroundSize="contain";
+		cookie.style.backgroundImage="url(https://o.remove.bg/downloads/3755fde1-fba9-4588-8037-0963e8ac3482/chocolate-chip-cookie-removebg-preview.png)";
+		cookie.style.display="inline-block";
+
+		cookie.addEventListener("click",
+		function(){
+			cookie.style.opacity="0";
+			var left = 0;
+
+		cookie.addEventListener("click", function(){
+			scream.play()
+
+		})
+	})
+	}
+	setInterval(makeCookie, 300)
+	
+	
+
+</script>
+</body>
+</html>
