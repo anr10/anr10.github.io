@@ -13,6 +13,7 @@
 
 
 <body>
+<audio src="eating.mp3" id="eating"></audio>
 
 	<div class="cookiefactory"><h1>------------------------------------------------------click to eat cookies!------------------------------------------------------<h1></div>
 
@@ -31,12 +32,10 @@
 		function(){
 			cookie.style.opacity="0";
 			var left = 0;
+			eating.play()
 
-		cookie.addEventListener("click", function(){
-			scream.play()
 
 		})
-	})
 	}
 	setInterval(makeCookie, 300)
 	
