@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style type="text/css">
+		.cat{
+			width:100px;
+			height:67px;
+			background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/A_Sad_cat_in_Ulus.jpg/2560px-A_Sad_cat_in_Ulus.jpg);
+			background-size:contain;
+			display:inline-block;
+		}
+
+		/*body{
+			background:palegreen;
+		}*/
+	</style>
+
+</head>
+
+
+<body>
+<center><h1>number of cats born each day</h1></center>
+<center><h1>you better adopt some of them (click to adopt)</h1></center>
+
+<audio src="kittens.mp3" id="kittens"></audio>
+
+
+<script type="text/javascript">
+	
+	function makeCat (input){
+		var cat = document.createElement("div")
+		document.body.appendChild(cat);
+		cat.classList.add("cat");
+		cat.innerText = input;
+
+		cat.addEventListener("click",
+		function(){
+			cat.style.backgroundImage="url(https://i.chzbgr.com/full/9799950336/hD964CEBB/cat)";
+			cat.style.backgroundSize="contain";
+			var left = 0;
+			kittens.play()
+		})
+	}
+
+	for (var counter =0; counter<70000; counter=counter+1){
+		makeCat(counter)
+	}
+
+
+
+</script>
+
+
+
+</body>
+</html>
