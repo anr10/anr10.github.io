@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		
+		.topping{
+			width:100px;
+			height:87px;
+			display:inline-block;
+		}
+
+		#blueberries{
+			background-image:url(https://www.freepnglogos.com/uploads/blueberries-png/blueberries-blueberry-sch-boden-spies-7.png);
+			background-size:contain;
+		}
+
+		#cream{
+			background-image:url(cream.png);
+			background-size:contain;
+			background-image:no-repeat;
+		}
+		
+		#chocolate{
+			background-image:url(https://s3.amazonaws.com/jo.www.bucket/larabar/nodes/images/3432/retina/semisweet_choc.png?1528404354);
+			background-size:contain;
+		}
+		
+		#pancakes{
+			width:700px;
+			height:700px;
+			background-image:url(https://i.pinimg.com/1200x/c9/0f/b9/c90fb9209c37792b81f16563ec8d69b4.jpg);
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+<div id="blueberries" class="topping"></div>
+<div id="cream" class="topping"></div>
+<div id="chocolate" class="topping"></div>
+
+
+<div id="pancakes"></div>
+
+
+
+<script type="text/javascript">
+		var topping;
+
+		function makeTopping (){
+			var smth = document.createElement("div");
+			document.body.appendChild(smth);
+			smth.classList.add("topping");
+			smth.innerText = topping
+		}
+
+
+		blueberries.addEventListener("click", function(){
+			topping = "blueberries.png"
+			image = "blueberries.png"
+			console.log(topping)
+		})
+
+		cream.addEventListener("click", function(){
+			topping = "cream.png"
+			console.log(topping)
+		})
+
+		chocolate.addEventListener("click", function(){
+			topping = "https://s3.amazonaws.com/jo.www.bucket/larabar/nodes/images/3432/retina/semisweet_choc.png?1528404354"
+			console.log(topping)
+		})
+
+
+		pancakes.addEventListener("click",
+
+			function makeDiv (event){
+				var stuff = document.createElement('div')
+				document.body.appendChild(stuff)
+				stuff.style.width = "50px"
+				stuff.style.height = "50px"
+				stuff.style.position = "absolute"
+				stuff.style.backgroundSize ="contain"
+					stuff.style.backgroundRepeat ="no-repeat"
+				stuff.style.left = event.clientX-50 + "px"
+				stuff.style.top = event.clientY-50 + "px"
+				stuff.style.backgroundImage = "url(" + topping +")"
+			})
+		
+
+</script>
+</body>
+</html>
