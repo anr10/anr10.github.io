@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	.part{
+			width:170px;
+			height:100px;
+			display:inline-block;
+		}
+
+		#eye{
+			background-image:url(leoeye.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+		}
+
+		#nose{
+			background-image:url(leonose.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+		}
+		
+		#mouth{
+			background-image:url(leomouth.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+		}
+
+		#hair{
+			background-image:url(leohair.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+		}
+
+		#ear{
+			background-image:url(leoear.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+		}
+
+		#ear2{
+			background-image:url(leoear2.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+		}
+		
+		
+		#face{
+			width:700px;
+			height:700px;
+			background-image:url(face2.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+		}
+</style>
+
+
+
+</head>
+<body>
+
+<div id="eye" class="part"></div>
+<div id="nose" class="part"></div>
+<div id="mouth" class="part"></div>
+<div id="hair" class="part"></div>
+<div id="ear" class="part"></div>
+<div id="ear2" class="part"></div>
+
+<div id="face"></div>
+
+
+
+<script type="text/javascript">
+		var part;
+
+		function makePart (){
+			var smth = document.createElement("div");
+			document.body.appendChild(smth);
+			smth.classList.add("part");
+			smth.innerText = part
+		}
+
+
+		eye.addEventListener("click", function(){
+			part = "leoeye.png"
+			console.log(part)
+		})
+
+		nose.addEventListener("click", function(){
+			part = "leonose.png"
+			console.log(part)
+		})
+
+		mouth.addEventListener("click", function(){
+			part = "leomouth.png"
+			console.log(part)
+		})
+
+		hair.addEventListener("click", function(){
+			part = "leohair.png"
+			console.log(part)
+		})
+
+		ear.addEventListener("click", function(){
+			part = "leoear.png"
+			console.log(part)
+		})
+
+		ear2.addEventListener("click", function(){
+			part = "leoear2.png"
+			console.log(part)
+		})
+
+
+		face.addEventListener("click",
+
+			function makeDiv (event){
+				var stuff = document.createElement('div')
+				document.body.appendChild(stuff)
+				stuff.style.width = "140px"
+				stuff.style.height = "140px"
+				stuff.style.position = "absolute"
+				stuff.style.backgroundSize ="contain"
+					stuff.style.backgroundRepeat ="no-repeat"
+				stuff.style.left = event.clientX-50 + "px"
+				stuff.style.top = event.clientY-20 + "px"
+				stuff.style.backgroundImage = "url(" + part +")"
+			})
+		
+
+</script>
+
+
+
+
+</body>
+</html>
