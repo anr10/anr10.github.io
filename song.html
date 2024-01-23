@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+<style type="text/css">
+	#benson{
+		text-align:center;
+		color:black;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size:20px;
+	}
+
+	#song{
+		position:absolute;
+		top:200px;
+		right:680px;
+		color:black;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size:30px;
+	}
+body{
+	background-color:beige;
+}
+</style>
+</head>
+<body>
+
+
+
+<div id="song"></div>
+<div id = "images"></div>
+
+<div id = "benson"><h1>what benson boone song are you?<h1></div>
+<script type="text/javascript">
+
+	var songs = ["sugar sweet", "lovely darling", "let me go", "in the stars", "to love someone", "before you", "little runaway", "what was", "ghost town", "room for 2", "work of art", "better alone", "coffee cake", "nights like these", "beautiful things"]
+
+	var images = ["sweet.png", "pulse.png", "walkmehome.png", "inthestars.png", "love.png", "before.jpeg", "pulse.png", "pulse.png", "walkmehome.png", "walkmehome.png", "walkmehome.png", "walkmehome.png", "pulse.png", "walkmehome.png", "beautiful.png"]
+
+
+	var x = Math.round(Math.random()*14);
+
+	song.innerText = songs[x]
+	images.style.backgroundImage = "url(" +images[x] + ")"
+	
+
+</script>
+
+</div>
+</body>
+</html>
