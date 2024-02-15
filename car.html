@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+<head>
+	<style type="text/css">
+		#rickshaw{
+			width:120px;
+			height:70px;
+			background-image:url("r2.png");
+			background-size:contain;
+			background-repeat: no-repeat;
+			position:relative;
+			left:0px;
+			top:320px;
+			transition:.3;
+			z-index:10d;
+		}
+
+		#bridge{
+			width:2000px;
+			height:400px;
+			background-image:url("bridge3.png");
+			background-size:contain;
+			position:relative;
+			left:-170px;
+			top:20px;
+			z-index:-10;
+		}
+
+		#cross{
+			position:absolute;
+			font-family: 'Roboto Condensed', sans-serif;
+			right:500px;
+		}
+
+		#money{
+			background-image:url("money.png");
+			width:100px;
+			height:100px;
+			position:absolute;
+			background-size:contain;
+			background-repeat:no-repeat;
+			top:285px;
+			left:1300px;
+			z-index: 10;
+		}
+
+
+		body{
+			background-image:url("water.jpg");
+/*			z-index:-20;*/
+		}
+	</style>
+
+</head>
+<body>
+<div id="cross"><h1>cross the bridge - use w a s d to move!<h1></div>
+<div id="money"></div>
+<div id="rickshaw"></div>
+<div id="bridge"></div>
+
+
+
+<script type="text/javascript">
+	var left = 0;
+	var bottom = 320;
+	document.addEventListener("keypress", function(
+		event){
+
+		console.log(event)
+
+
+		if(event.keyCode == 100)
+				{
+			rickshaw.style.backgroundImage="url(r2.png)"
+			left = left+10;
+			console.log(left)
+			rickshaw.style.left = left + 'px';
+		}
+
+		if(event.keyCode == 97)
+			{
+		rickshaw.style.backgroundImage="url(r.png)"
+			left = left-10;
+			console.log(left)
+			rickshaw.style.left = left + 'px';
+		}
+
+		if(event.keyCode == 115)
+				{
+		rickshaw.style.backgroundImage="url(r3.png)"
+			bottom = bottom+10;
+			console.log(bottom)
+			rickshaw.style.top = bottom + 'px';
+		}
+
+		if(event.keyCode == 119)
+				{
+		rickshaw.style.backgroundImage="url(r4.png)"
+			bottom = bottom-10;
+			console.log(bottom)
+			rickshaw.style.top = bottom + 'px';
+		}
+	})
+
+
+</script>
+</body>
+</html>

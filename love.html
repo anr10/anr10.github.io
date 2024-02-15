@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	
+	body{
+		background-color:rosybrown;
+	}
+</style>
+
+
+</head>
+<body>
+how cute are you? (enter your name)
+<input id="life">
+</input>
+<button id = "button">
+	submit
+</button>
+how many friends do you have?
+<input id="friend">
+<button id = "button2">
+	submit
+</button>
+<div id="answer"></div>
+<script type="text/javascript">
+	button.addEventListener("click", function(){
+		console.log(life.value)
+		if(life.value=="anushka"){
+			answer.innerText = "ANUSHKA IS 100% cute!!!"
+		}
+
+		else{
+			answer.innerText = life.value + "...you're " +
+			Math.floor(Math.random()*100) + "%" + " cute."
+		}
+	})
+		button2.addEventListener("click", function(){
+		console.log(friend.value)
+		if(friend.value=="0"){
+			answer.innerText = "yeah, that checks out."
+		}
+
+		else{
+			answer.innerText = friend.value + "...nope, thats wrong. you have " +
+			Math.floor(Math.random()*8) + " REAL friend(s)."
+		}
+
+
+	})
+
+</script>
+
+
+
+
+</body>
+</html>

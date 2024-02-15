@@ -17,14 +17,24 @@
 	#song{
 		position:absolute;
 		top:200px;
+/*		right:680px;*/
+		color:black;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size:20px;
+
+	}
+
+	#click{
+		position:absolute;
+		top:300px;
 		right:680px;
 		color:black;
 		font-family: 'Roboto Condensed', sans-serif;
 		font-size:30px;
 	}
-body{
+	body{
 	background-color:beige;
-}
+	}
 </style>
 </head>
 <body>
@@ -32,20 +42,25 @@ body{
 
 
 <div id="song"></div>
+
+<div id="click">click here</div>
 <div id = "images"></div>
 
-<div id = "benson"><h1>what benson boone song are you?<h1></div>
+<div id = "benson"><h1>what benson boone song is for you?<h1></div>
 <script type="text/javascript">
 
-	var songs = ["sugar sweet", "lovely darling", "let me go", "in the stars", "to love someone", "before you", "little runaway", "what was", "ghost town", "room for 2", "work of art", "better alone", "coffee cake", "nights like these", "beautiful things"]
+	var songs = ["sugar sweet - you've recently been betrayed by someone you love and you're still trying to get over it. you've always been a nice person but right now you're starting to get a little upset with some people in your life.", "lovely darling - there's someone in your life that you spend a lot of time with, however you don't feel a connection between the two of you anymore. you should find a way to tell them that it's best for you to part because your personalities don't match.", "let me go - you've lost someone you love, are about to, or have an unrequited love for someone. this has lasted a long time and it's really torturing you. you wish it never happened. you tend to have attachment issues to people and it hurts.", "in the stars - someone that meant a lot to you has passed away and you miss them so much and feel helpless. you're a sensitive person at heart and treasure connection.", "to love someone - you found someone that you really loved but suddenly things broke apart between the two of you and it's hurting a lot. you're easily affected by people moving away (metaphorically).", "before you - you've found someone who you want to live your whole life with, and you can't imagine what it would be like without them. you tend to be a lonely person at heart but this specific person has helped you open up, and you appreciate that.", "little runaway - you know someone who's been struggling recently and you really want to help them but you're not sure how. you have an internal need to help others.", "what was - you consistently feel like you're someone else in your body and you don't really know who you are. you wish you were anyone else.", "ghost town - you feel like your connection with a specific person is slowly fading. you are a very empathetic person that always wants the best for others.", "room for 2", "work of art", "better alone", "coffee cake", "nights like these", "beautiful things"]
 
 	var images = ["sweet.png", "pulse.png", "walkmehome.png", "inthestars.png", "love.png", "before.jpeg", "pulse.png", "pulse.png", "walkmehome.png", "walkmehome.png", "walkmehome.png", "walkmehome.png", "pulse.png", "walkmehome.png", "beautiful.png"]
 
 
-	var x = Math.round(Math.random()*14);
+	click.addEventListener("click",
+		function(){
+		var x = Math.round(Math.random()*14);
+		song.innerText = songs[x]
+		images.style.backgroundImage = "url(" +images[x] + ")"
 
-	song.innerText = songs[x]
-	images.style.backgroundImage = "url(" +images[x] + ")"
+	})
 	
 
 </script>

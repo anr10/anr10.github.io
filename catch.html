@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+<head>
+	<style type="text/css">
+		#bucket{
+			width:300px;
+			height:250px;
+			background-image:url("bucket.png");
+			background-size:contain;
+			background-repeat: no-repeat;
+			position:relative;
+			left:600px;
+			top:530px;
+			transition:.3;
+			z-index:10d;
+		}
+
+		#water{
+			height: 50px;
+			width: 50px;
+			background-image:url("water2.png");
+			background-size:contain;
+			background-repeat: no-repeat;
+			position:absolute;
+			animation-iteration-count:1;
+			animation-duration:8s;
+			top:0px;
+		}
+
+		#cross{
+			position:absolute;
+			color:white;
+			font-family: 'Single Day', cursive;
+			font-size: 30px;
+			right:500px;
+		}
+		body{
+			background-image:url("house.webp");
+/*			z-index:-20;*/
+		}
+
+		@keyframes drop{
+
+			10%{
+				background-image:url(water2.png);
+				top:100px;
+			}
+
+			20%{
+				background-image:url(water2.png);
+				top:200px;
+			}
+
+			30%{
+				background-image:url(water2.png);
+				top:300px;
+			
+			}
+
+			40%{
+				background-image:url(water2.png);
+				top:400px;
+			
+			}
+
+			50%{
+				background-image:url(water2.png);
+				top:500px;
+			
+			}
+			60%{
+				background-image:url(water2.png);
+				top:600px;
+			
+			}
+
+			70%{
+				background-image:url(water2.png);
+				top:700px;
+			
+			}
+
+			80%{
+				background-image:url(water2.png);
+				top:750px;
+			
+			}
+
+			90%{
+				background-image:url(water2.png);
+				top:800px;
+			
+			}
+
+			90%{
+				background-image:url(water2.png);
+				top:820px;
+			
+			}
+	</style>
+
+</head>
+<body>
+<div id="cross"><h1>COLLECT THE WATER!<h1></div>
+<div id="bucket"></div>
+<div id="water"></div>
+
+
+
+
+
+<script type="text/javascript">
+	var left = 600;
+	var bottom = 530;
+	document.addEventListener("keypress", function(
+		event){
+
+		console.log(event)
+
+
+		if(event.keyCode == 100)
+				{
+			bucket.style.backgroundImage="url(bucket.png)"
+			left = left+20;
+			console.log(left)
+			bucket.style.left = left + 'px';
+		}
+
+		if(event.keyCode == 97)
+			{
+		bucket.style.backgroundImage="url(bucket.png)"
+			left = left-20;
+			console.log(left)
+			bucket.style.left = left + 'px';
+		}
+
+		if(event.keyCode == 115)
+				{
+		bucket.style.backgroundImage="url(bucket.png)"
+			bottom = bottom+20;
+			console.log(bottom)
+			bucket.style.top = bottom + 'px';
+		}
+
+		if(event.keyCode == 119)
+				{
+		bucket.style.backgroundImage="url(bucket.png)"
+			bottom = bottom-20;
+			console.log(bottom)
+			bucket.style.top = bottom + 'px';
+		}
+
+		
+
+		water.addEventListener("click",
+		function(){
+			water.style.right="0px"
+			water.style.top="0px"
+			water.style.width ="100%"
+			// water.style.backgroundImage=url("water2.png")
+			water.style.animationName ="drop";
+			// var left = 0;
+
+		})
+
+	})
+
+
+</script>
+</body>
+</html>
