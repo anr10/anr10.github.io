@@ -31,6 +31,7 @@
 			background-repeat: no-repeat;
 			position:absolute;
 			animation-iteration-count:1;
+			transition:1s
 			animation-duration:8s;
 			top:0px;
 		}
@@ -47,7 +48,7 @@
 /*			z-index:-20;*/
 		}
 
-		@keyframes drop{
+		/*@keyframes drop{
 
 			10%{
 				background-image:url(water2.png);
@@ -104,7 +105,7 @@
 				background-image:url(water2.png);
 				top:820px;
 			
-			}
+			}*/
 	</style>
 
 </head>
@@ -120,6 +121,34 @@
 <script type="text/javascript">
 	var left = 600;
 	var bottom = 530;
+	var watertop=0;
+	var waterleft = Math.random()*800;
+	water.style.left= waterleft + "px"
+
+	function waterFalling (){
+		watertop = watertop + 100
+		water.style.top = watertop + "px"
+		console.log("the water droplet is at " + watertop + "px")
+		if(watertop > 600) {
+
+			if(left>waterleft-200){
+				water.style.opacity="0"
+				alert("good job! you've caught the water")
+			}
+
+			if(left<waterleft+200){
+				water.style.opacity="0"
+				alert("good job! you've caught the water")
+			}
+
+		}
+			
+
+	}
+
+
+
+
 	document.addEventListener("keypress", function(
 		event){
 
@@ -132,6 +161,8 @@
 			left = left+20;
 			console.log(left)
 			bucket.style.left = left + 'px';
+
+
 		}
 
 		if(event.keyCode == 97)
@@ -142,38 +173,28 @@
 			bucket.style.left = left + 'px';
 		}
 
-		if(event.keyCode == 115)
-				{
-		bucket.style.backgroundImage="url(bucket.png)"
-			bottom = bottom+20;
-			console.log(bottom)
-			bucket.style.top = bottom + 'px';
-		}
-
-		if(event.keyCode == 119)
-				{
-		bucket.style.backgroundImage="url(bucket.png)"
-			bottom = bottom-20;
-			console.log(bottom)
-			bucket.style.top = bottom + 'px';
-		}
-
-		
-
-		water.addEventListener("click",
-		function(){
-			water.style.right="0px"
-			water.style.top="0px"
-			water.style.width ="100%"
-			// water.style.backgroundImage=url("water2.png")
-			water.style.animationName ="drop";
-			// var left = 0;
-
-		})
-
 	})
+		water.addEventListener("click",
+			function(){
+				// water.style.right="0px"
+				// water.style.top="0px"
+				// water.style.width ="100%";
+				water.style.backgroundImage="url(water2.png)"
+				water.style.animationName ="drop";
+				var left =0;
+				waterTop = 0;
+				setInterval(waterFalling, 1000)
 
 
-</script>
+			})
+
+
+
+	</script>
+
+
+
+
+
 </body>
 </html>

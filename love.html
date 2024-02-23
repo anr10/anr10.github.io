@@ -22,7 +22,13 @@ how many friends do you have?
 <button id = "button2">
 	submit
 </button>
+how much money do you have?
+<input id="money">
+<button id = "button3">
+	submit
+</button>
 <div id="answer"></div>
+
 <script type="text/javascript">
 	button.addEventListener("click", function(){
 		console.log(life.value)
@@ -48,6 +54,20 @@ how many friends do you have?
 
 
 	})
+		button3.addEventListener("click", function(){
+		console.log(money.value)
+		if(money.value=="0"){
+			answer.innerText = "yeah, that checks out."
+		}
+
+		else{
+			answer.innerText = money.value + "...nope, thats wrong. you have " + "$" +
+			Math.floor(Math.random()*15)
+		}
+
+
+	})
+
 
 </script>
 
