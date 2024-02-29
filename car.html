@@ -67,6 +67,12 @@
 <script type="text/javascript">
 	var left = 0;
 	var bottom = 320;
+	
+	if(rickshaw.style.left>100)
+			{
+				alert("good job! you won!")
+		}
+
 	document.addEventListener("keypress", function(
 		event){
 
@@ -104,6 +110,10 @@
 			console.log(bottom)
 			rickshaw.style.top = bottom + 'px';
 		}
+
+
+
+		
 	})
 
 
