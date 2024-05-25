@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+<style type="text/css">
+	#background2{
+		background-image: url(map2.gif);
+			width:100%;
+			height:800px;
+			background-size:cover;
+		}
+
+	#dot{
+		height:60px;
+		width:60px;
+		background-image:url(dot.png);
+		top:320px;
+		right:650px;
+		position:absolute;
+		background-size:cover;
+		background-repeat:no-repeat;
+	}
+
+	#anagha{
+		height:400px;
+		width:400px;
+		background-image:url(anagha.png);
+		top:20px;
+		right:450px;
+		position:absolute;
+		background-size:cover;
+		background-repeat:no-repeat;
+		opacity: 0.0;
+	}
+
+	#map{
+		font-family: 'Outfit', sans-serif;
+		top:0px;
+		right:650px;
+		position:absolute;
+	}
+
+	}
+
+</style>
+
+
+
+</head>
+<body>
+
+
+
+<div id="background2"></div>
+<div id="dot"></div>
+<div id="anagha"></div>
+<div id="map"><h1>map</h1></div>
+
+<script type="text/javascript">
+
+dot.addEventListener("click",
+	function(){
+		var anagha = document.getElementyById("anagha")
+		anagha.style.opacity = "1.0";
+		console.log("clicked");
+	})
+
+</script>
+
+
+
+</body>
+
+
+
+</html>

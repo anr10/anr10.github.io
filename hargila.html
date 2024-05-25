@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+	
+<style type="text/css">
+	#hargila{
+		position:absolute;
+		bottom:370px;
+		right:54px;
+		color:black;
+		font-family: 'Bebas Neue', sans-serif;
+		font-size:100px;
+	}
+
+	#army{
+		position:absolute;
+		bottom:150px;
+		left:970px;
+		color:black;
+		font-family: 'Bebas Neue', sans-serif;
+		font-size:120px;
+	}
+
+	#aboutus{
+		position:absolute;
+		left:300px;
+		top:22px;
+		color:black;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size:15px;
+	}
+	#aboutus:hover{
+			color:darkgreen;
+		}
+
+	#support:hover{
+			color:darkgreen;
+		}
+
+	#resources:hover{
+			color:darkgreen;
+		}
+
+
+	#support{
+		position:absolute;
+		left:450px;
+		top:0px;
+		color:black;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size:15px;
+	}
+
+	#resources{
+		position:absolute;
+		left:660px;
+		top:0px;
+		color:black;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size:15px;
+	}
+
+
+	body{
+		background-image: url("hargila.png");
+		background-size:cover;
+	}
+
+	/* Dropdown Button */
+.dropbtn {
+
+position: absolute;
+left:660px;
+
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.resources {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.inresources {
+	left:660px;
+	top:63px;
+  display: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.inresources a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.inresources a:hover {background-color: rgba(0,0,0,0.2);}
+
+/* Show the dropdown menu on hover */
+.resources:hover .inresources {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.resources:hover .button {background-color: #3e8e41;}
+
+
+	/* Dropdown Button */
+.dropbtn {
+
+position: absolute;
+left:450px;
+
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.support {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.insupport {
+	left:450px;
+	top:90px;
+  display: none;
+  position: absolute;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: rgba(255, 255, 255, 0.3);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.insupport a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.insupport a:hover {background-color: rgba(0,0,0,0.2);}
+
+/* Show the dropdown menu on hover */
+.support:hover .insupport {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.support:hover .button {background-color: #3e8e41;}
+
+
+</style>
+
+</head>
+<body>
+
+<div id="hargila"><h1>HARGILA<h1></div>
+<div id="army"><h1>ARMY<h1></div>
+
+
+<div class="resources">
+<a class='button' href="resources.html">
+			<div id="resources"><h1>resources</h1></div>
+
+</a>
+  <div class="inresources">
+    <a href="news.html">articles/news coverage</a>
+    <a href="./reveal.js-master/photos.html">photo gallery</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyZaHpnt8XdKtV97fQCnCmG1WrxiA6ojuTciEuTod6Bpm0sA/viewform?usp=sf_link" target="_blank"> contact us</a>
+  </div>
+</div>
+
+<div class="support">
+<a class='button' href="supportus.html">
+			<div id="support"><h1>support us</h1></div>
+
+</a>
+  <div class="insupport">
+    <a href="shop.html">shop</a>
+    <a href="https://rewilding.academy/projects/hargila-army-women-saving-the-greater-adjutant-stork/" target="_blank">donate</a>
+
+  </div>
+</div>
+
+
+
+
+
+<a href="aboutus.html">
+
+
+			<div id="aboutus"><h1>about<h1></div>
+
+		</a>
+
+
+
+</body>
+</html>

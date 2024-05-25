@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+
+<head>
+	
+<style type="text/css">
+	
+#articles{
+	position:absolute;
+	right:630px;
+	top:-70px;
+	font-family: 'Bebas Neue', sans-serif;
+	font-size:60px;
+	z-index: 1;
+}
+
+#access{
+	position:absolute;
+	right:830px;
+	top:110px;
+	font-family: 'Bebas Neue', sans-serif;
+	font-size:20px;
+
+	z-index: 1;
+}
+
+#guardian{
+	position:absolute;
+	height:200px;
+	width:80%;
+	color:black;
+	font-family: 'Roboto Condensed', sans-serif;
+	top:300px;
+	left:-500%;
+	z-index: 5;
+	font-size: 30px;
+	transition:2s;
+
+
+}
+
+
+#nyt{
+	position:absolute;
+	color:black;
+	font-family: 'Roboto Condensed', sans-serif;
+	top:500px;
+	height:200px;
+	width:80%;
+	left:-500%;
+	z-index: 6;
+	font-size:30px;
+	transition:2s;
+
+}
+
+#nyt:hover{
+	color:skyblue;
+}
+
+#bio:hover{
+	color:skyblue;
+}
+
+#guardian:hover{
+	color:skyblue;
+}
+
+#bio{
+	position:absolute;
+	color:black;
+	font-family: 'Roboto Condensed', sans-serif;
+	top:700px;
+	width:80%;
+	left:-500%;
+	z-index: 6;
+	font-size:30px;
+	transition:2s;
+
+
+}
+
+
+
+body{
+	background-color:slategrey;
+	z-index:0;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+<div id="articles"><h1>news coverage</h1></div>
+
+<div id="access"><h1>click to access</h1></div>
+
+<a href="https://www.theguardian.com/global-development/2023/feb/09/assam-hargila-army-women-saved-india-rarest-stork-greater-adjutant" target="_blank">>
+		<div id="guardian">
+			"The conservation efforts have also transformed the lives of the women, who now go into other villages to raise awareness of the birds. “Joining the hargila army gave me a chance to show everyone that I could do something meaningful with my life,” says Daivaki Saikia, a young widow from Dadara’s marginalised fishing community, who has been a member for five years" - The Guardian, Febuary 9th 2023
+
+</div>
+
+<a href="https://www.nytimes.com/2021/03/29/travel/india-greater-adjutant-stork.html" target="_blank">>
+		<div id="nyt">
+		"The work has paid dividends. The greater adjutant’s local population has risen to an estimated 950 birds, up from 400 birds in 2007. The number of nesting colonies in the villages of Dadara, Pacharia and Singimari has also risen during the same interval — to 220 nests, up from 28" - The New York Times, March 30th 2021
+	</div>
+
+<a href="https://www.discoverwildlife.com/environment/how-10000-women-saved-indias-rarest-stork" target="_blank">>
+		<div id="bio">
+		"With the help of 10,000 rural women, Barman became the driving force in safeguarding the nests of storks as well as rebranding the prehistoric-looking scavenger from a bad omen to positive cultural symbol. The women became known as 'Hargila Army' or 'Stork Sisters'" - BBC Wildlife Magazine, May 1st 2024
+	</div>
+
+<script type="text/javascript">
+
+	var x = 0;
+	document.addEventListener("click", function(){
+		x=x+1
+
+		if (x==1){
+		guardian.style.left="10%"
+		}
+		
+		if (x==2){
+			nyt.style.left="10%"
+		}
+
+		if (x==3){
+			bio.style.left="10%"
+		}
+	})
+</script>
+
+</body>
+</html>

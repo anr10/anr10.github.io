@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+
+	#dance{
+		height:600px;
+		width:400px;
+		right:950px;
+		top:60px;
+		background-image:url(ha.png);
+		position:absolute;
+		background-size:contain;
+		background-repeat:no-repeat;
+		z-index:0;
+	}
+
+	#me{
+		position:absolute;
+		font-size:20px;
+		height:500px;
+		width:500px;
+		right:400px;
+		top:200px;
+	}
+
+	#next{
+		width:50px;
+		height:50px;
+		background-image:url(next.png);
+		background-color:red;
+		position:absolute;
+		top:350px;
+		left:380px;
+			z-index:1;
+	}
+
+	#about{
+		position:absolute;
+		right:600px;
+	}
+
+	body{
+		margin:0px;
+	}
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div id="dance"></div>
+<div id="next"></div>
+<div id="about"><h1>my story</h1></div>
+
+<div id="me">I’ve been dancing since I was six years old. My mom is from India and my dad is from Kansas, so I’ve always grown up being a little confused about what culture was mine and what made me me. However, as I’ve continued to dance, meet girls who I can connect with, and tell stories of my heritage through traditional classical dance, I’ve realized that this is one of the few things I take a lot of joy and pride in doing. There are so many stories told through bharatanatyam, some about hopeless women wishing for love from God or elephants running from merciless crocodiles only to be saved by the powerful and charismatic Vishnu. Dance allows me to feel confident in who I am and reminds me of my uniqueness. In turn, I decided to make a website connecting Indian classical dancers from around the world and spreading awareness about culture and the importance of expression.
+</div>
+
+<script type="text/javascript">
+	var counter =0;
+	next.addEventListener("click", 
+		function(){
+			counter = counter +1;
+
+			if (counter == 1){
+				dance.style.width="400px";
+				dance.style.height="600px";
+				dance.style.backgroundImage="url(me.jpeg)";
+				dance.style.backgroundRepeat="no-repeat";
+
+			}
+
+			if (counter == 2){
+				dance.style.width="400px";
+				dance.style.height="600px";
+				dance.style.backgroundImage="url(group.jpg)";
+				dance.style.backgroundRepeat="no-repeat";
+
+			}
+			
+		}
+	)
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	
+	body{
+		background-color:rosybrown;
+	}
+</style>
+
+
+</head>
+<body>
+what's your zip code?
+<input id="life">
+</input>
+<button id = "button">
+	submit
+</button>
+
+
+	
+
+<div id="answer"></div>
+
+<script type="text/javascript">
+	button.addEventListener("click", function(){
+		console.log(life.value)
+		if(life.value=="2000"){
+			answer.innerText = "Sorry, that is not a valid zip code."
+		}
+
+		else{
+			answer.innerText = "The closest animal shelters to zip code " + life.value + " are..." + ""
+			Math.floor(Math.random()*100) + "and" + " "
+		}
+	})
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
